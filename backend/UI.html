@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link	rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+body {
+font-family: Arial, sans-serif; margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+
+header {
+background-color: #333; color: #fff;
+text-align: center; padding: 1em;
+}
+
+main {
+max-width: 1200px; margin: 0 auto; padding: 20px;
+}
+
+section {
+margin-bottom: 20px;
+}
+
+footer {
+background-color: #333; color: #fff;
+text-align: center; padding: 1em; position: fixed; bottom: 0;
+width: 100%;
+}
+
+@media only screen and (max-width: 768px) { main {
+padding: 10px;
+}
+
+footer {
+position: static;
+}
+}
+</style>
+<title>Responsive UI Example</title>
+</head>
+<body>
+<div class="container">
+<header class=" text-center">
+<h1>Responsive UI Example</h1>
+</header>
+
+<main>
+<section class="mb-4">
+<h2>Section 1</h2>
+<p>This is some content for section 1.</p>
+</section>
+
+<section class="mb-4">
+<h2>Section 2</h2>
+<p>This is some content for section 2.</p>
+</section>
+</main>
+
+<footer class="bg-dark text-light text-center py-3 mt-5"> &copy; 2024 Your Company Name
+</footer>
+</div>
+
+<!-- Bootstrap JS and dependencies (jQuery) -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></ script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></ script>
+</body>
+</html>
+ --> -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hemburger Menu | Code Mentor</title>
+     <link rel="stylesheet" href="style.css">    
+ </head>
+ <body>
+     <nav>
+         <div class="logo">
+             <a href="/"><i class="fa-regular fa-compass"></i></a>
+         </div>
+         <ul id="menuList">
+             <li><a href="/">Explore</a></li>
+             <li class="hidden"><a href="">
+              <form class="d-flex search " role="search">
+                <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination" aria-label="Search">
+                <button class="btn btn-outline-success btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search </button>
+              </form>
+             </a></li>
+             <li><a href="/listing/new">Add New Listing</a></li>
+             <% if(!User) {%>
+             <li><a href="/signup">SignUp</a></li>
+             <li><a href="/Login">Login</a></li>
+             <% } %>
+             <% if(User) { %>
+             <li><a href="/logout">LogOut</a></li>
+             <% } %>
+         </ul>
+         <div class="menu-icon">
+             <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+         </div>
+     </nav>
+ 
+ 
+     <script>
+         let menuList = document.getElementById("menuList")
+         menuList.style.maxHeight = "0px";
+ 
+         function toggleMenu(){
+             if(menuList.style.maxHeight == "0px")
+             {
+                 menuList.style.maxHeight = "300px";
+             }
+             else{
+                 menuList.style.maxHeight = "0px";
+             }
+         }
+         
+     </script>
+     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+ </body>
+ </html>
